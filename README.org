@@ -1,0 +1,9 @@
+* Code for Evolutionary Layout of Floor Plans
+
+** Tools/useful links
++ [[https://github.com/PyMesh/PyMesh][PyMesh library]]
++ [[https://en.wikipedia.org/wiki/Voronoi_diagram][Voronoi diagrams]]
++ [[https://media.readthedocs.org/pdf/neat-python/latest/neat-python.pdf][neat-python documentation]]
++ [[http://www.cs.uni.edu/~schafer/4620/readings/Ai%20Techniques%20For%20Game%20Programming.pdf][AI techniques for game programming]] - has some useful info on NEAT
++ [[https://www.pygame.org/news][PyGame]]
++ [[https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.spatial.Voronoi.html][scipy Voronoi diagram creation]] and [[https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.voronoi_plot_2d.html][Voronoi diagram plotting in 2D]]
