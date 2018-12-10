@@ -9,3 +9,26 @@
 + [[https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.spatial.Voronoi.html][scipy Voronoi diagram creation]] and [[https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.voronoi_plot_2d.html][Voronoi diagram plotting in 2D]]
 + [[http://pcg.wikidot.com/pcg-algorithm:voronoi-diagram][procedural content generation wiki]]
 + [[https://morphometry.org/][Morphometry - website on using Minkowski scalars and tensors as ways to quantify shape]]
+
+
+* Wiki for Evolutionary Floor Plans Project
+Project to replicate the results of Joel Simon on [[http://www.joelsimon.net/evo_floorplans.html][evolving floor plans]]
+
+** Resources
+*** NEAT (Neuroevolution of Augmenting Topologies)
+**** [[https://github.com/MultiNEAT/MultiNEAT][MulitNEAT]]
+     + An implementation of the NEAT algorithm not easily extended
+     + [[https://github.com/joel-simon/MultiNEAT][Joel Simon fork]]
+**** [[https://github.com/CodeReclaimers/neat-python][neat-python]]
+     + Implementation of neat extended by original project
+     + [[https://neat-python.readthedocs.io/en/latest/config_file.html][docs]]
+     + [[https://github.com/joel-simon/neat-python][Joel Simon fork]]
+**** [[https://github.com/joel-simon/evoDesign][evoDesign original repo]]
+     + [[https://github.com/tyrvi/evoDesign][my fork]]
+     + [[https://github.com/joel-simon/evo-design][evo-design repo]] not sure what the difference is
+**** [[https://news.ycombinator.com/item?id=17652410][Hacker news post]]
+**** [[https://www.reddit.com/r/programming/comments/92t4v4/evolving_floorplans/][/r/programming post]]
+**** [[https://www.reddit.com/r/MachineLearning/comments/92suxh/p_evolving_floorplans/][/r/machinelearning post]]
+**** [[https://graphviz.readthedocs.io/en/stable/][Python graphviz library]]
+**** [[https://stackoverflow.com/questions/9173490/python-networkx][Python planar graph embedding from stackoverflow]]
+**** [[https://www.pygame.org/docs/][PyGame docs]]
