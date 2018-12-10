@@ -32,3 +32,8 @@ Project to replicate the results of Joel Simon on [[http://www.joelsimon.net/evo
 **** [[https://graphviz.readthedocs.io/en/stable/][Python graphviz library]]
 **** [[https://stackoverflow.com/questions/9173490/python-networkx][Python planar graph embedding from stackoverflow]]
 **** [[https://www.pygame.org/docs/][PyGame docs]]
+*** Genetic Algorithms
+**** [[https://smile.amazon.com/Genetic-Algorithms-Python-Clinton-Sheppard/dp/1540324001/ref=sr_1_3?ie=UTF8&qid=1544456143&sr=8-3&keywords=genetic+algorithms][Genetic Algorithms with Python]] - simple book with some examples of GAs in Python
+**** [[https://smile.amazon.com/Introduction-Genetic-Algorithms-Complex-Adaptive/dp/0262631857/ref=sr_1_5?ie=UTF8&qid=1544456143&sr=8-5&keywords=genetic+algorithms][An Introduction to Genetic Algorithms - Melanie Mitchell]] simple introduction to GAs
+**** [[https://smile.amazon.com/Genetic-Algorithms-Optimization-Machine-Learning/dp/0201157675/ref=sr_1_3?ie=UTF8&qid=1544456866&sr=8-3&keywords=Genetic+Algorithms+in+Search%2C+Optimization%2C+and+Machine+Learning][Genetic Algorithms in Search, Optimization, and Machine Learning - David Goldberg]]
+**** [[https://cs.gmu.edu/~sean/book/metaheuristics/][Essentials of Metaheuristics by Sean Luke]]
