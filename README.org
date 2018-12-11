@@ -9,6 +9,7 @@
 + [[https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.spatial.Voronoi.html][scipy Voronoi diagram creation]] and [[https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.voronoi_plot_2d.html][Voronoi diagram plotting in 2D]]
 + [[http://pcg.wikidot.com/pcg-algorithm:voronoi-diagram][procedural content generation wiki]]
 + [[https://morphometry.org/][Morphometry - website on using Minkowski scalars and tensors as ways to quantify shape]]
++ [[https://www.programcreek.com/python/example/91993/scipy.spatial.Voronoi][scipy voronoi examples]]
 
 
 * Wiki for Evolutionary Floor Plans Project
