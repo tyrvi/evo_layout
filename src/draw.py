@@ -2,7 +2,7 @@ import pygame
 from pygame import gfxdraw
 
 
-def draw():
+def draw_example():
     pygame.init()
     size = (600, 600)
     screen = pygame.display.set_mode(size)
@@ -13,7 +13,7 @@ def draw():
     clock = pygame.time.Clock()
     fps = 40
 
-    gfxdraw.filled_circle(screen, 200, 200, 100, white)
+    gfxdraw.filled_circle(screen, 610, 238, 14, white)
 
     while not done:
         for event in pygame.event.get():
@@ -24,9 +24,9 @@ def draw():
         pygame.display.flip()
 
 
-def main():
-    draw()
+def draw_graph(graph):
+    raise(NotImplementedError("draw_graph has not been implemented yet"))
 
-
+    
 if __name__ == '__main__':
-    main()
+    draw_example()
