@@ -38,7 +38,8 @@ Project to replicate the results of Joel Simon on [[http://www.joelsimon.net/evo
 **** [[https://cs.gmu.edu/~sean/book/metaheuristics/][Essentials of Metaheuristics by Sean Luke]]
 
 * Todo List
-** TODO Fix bug placing vertices on top of each other
+** DONE Fix bug placing vertices on top of each other
+   CLOSED: [2019-01-26 Sat 17:48]
 ** TODO Implement graph drawing
 ** TODO Implement multiple radii for vertices in nature algorithm
 ** TODO Implement edge strength in nature algorithm

@@ -27,7 +27,7 @@ class Graph:
 class Vertex:
     """A Vertex consists of a 2-tuple for position, `pos`, and a 2-tuple for
     displacement, `disp`."""
-    def __init__(self, idx, pos=[0, 0], disp=[0, 0], radius=2, random=False, width=200, height=200):
+    def __init__(self, idx, pos=[0, 0], disp=[0, 0], radius=10, random=False, width=200, height=200):
         # TODO: allow for random instantiation of position
         if random is True:
             x = np.random.randint(0, width)
@@ -55,11 +55,24 @@ class Edge:
         return "{!s} <--> {!s}".format(self.v1.idx, self.v2.idx)
 
 
-def generate(num_v=6):
+def generate3():
+    V = []
+    E = []
+    for i in range(3):
+        v = Vertex(i, random=True)
+        V.append(v)
+
+    E.append(Edge(V[0], V[1]))
+    E.append(Edge(V[0], V[2]))
+
+    return Graph(V, E)
+
+
+def generate6():
     """Generate a graph"""
     V = []
     E = []
-    for i in range(num_v):
+    for i in range(6):
         v = Vertex(i, random=True)
         V.append(v)
 
@@ -73,5 +86,5 @@ def generate(num_v=6):
 
 
 if __name__ == '__main__':
-    G = generate()
+    G = generate6()
     print(G)
