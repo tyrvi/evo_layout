@@ -1,5 +1,6 @@
 import pygame
 from pygame import gfxdraw
+from pygame import freetype
 import graph
 import nature
 
@@ -31,10 +32,16 @@ def draw_graph(graph, size=(500, 500)):
     screen = pygame.display.set_mode(size)
     white = pygame.Color('white')
 
+    font = freetype.SysFont("monospace", 10)
+
     done = False
 
     for v in graph.V:
         gfxdraw.filled_circle(screen, int(v.pos[0]), int(v.pos[1]), v.radius, white)
+        font.render_to(screen, (int(v.pos[0]), int(v.pos[1])), str(v.idx))
+
+    for e in graph.E:
+        gfxdraw.line(screen, int(e.v1.pos[0]), int(e.v1.pos[1]), int(e.v2.pos[0]), int(e.v2.pos[1]), white)
 
     while not done:
         for event in pygame.event.get():
@@ -45,10 +52,9 @@ def draw_graph(graph, size=(500, 500)):
 
 
 if __name__ == '__main__':
-    # draw_exampe()
-    G = graph.generate3()
+    G = graph.generate6()
     print(G)
-    draw_graph(G)
-    G = nature.nature(G, iterations=100)
+    # draw_graph(G)
+    G = nature.nature(G, iterations=1000)
     print(G)
     draw_graph(G)

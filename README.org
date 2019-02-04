@@ -40,8 +40,25 @@ Project to replicate the results of Joel Simon on [[http://www.joelsimon.net/evo
 * Todo List
 ** DONE Fix bug placing vertices on top of each other
    CLOSED: [2019-01-26 Sat 17:48]
-** TODO Implement graph drawing
-** TODO Implement multiple radii for vertices in nature algorithm
-** TODO Implement edge strength in nature algorithm
-** TODO Implement NEAT graph representation
-** TODO Implement NEAT objective functions
+** TODO Graph algorithm [0/4]
+   1. [ ] Allow for passing in different room size constants to repulsive forces (these
+      are the radii for the various room sizes).
+   2. [ ] Allow different forces to be passed into nature.
+   3. [ ] Allow for different edge strengths in attractive forces.
+** TODO NEAT [0/3]
+   1. [ ] Node representation. [0/2]
+      1. [ ] Size.
+         - The radius of the node to be used in the graph drawing
+           algorithm.
+      2. [ ] Room type.
+         - This will encode the density a given room can expect. For
+           example, a room with lots of tables and high usage needs
+           more space than a room with high usage where people are
+           just standing.
+   2. [ ] Edge representation. [0/1]
+      1. [ ] Connection weight (spring constant in attractive forces).
+   3. [ ] Objective functions. [0/2]
+      1. [ ] Rooms with high levels of usage should be placed near
+         other rooms with high levels of usage.
+      2. [ ] Room size should be optimal to the amount of usage that
+         room type sees.

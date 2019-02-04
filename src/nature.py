@@ -1,23 +1,25 @@
 import numpy as np
-from graph import generate3, generate6
-from util import pause
+from graph import generate6
+# from util import pause
 
 
-def nature(graph, width=500, length=500, iterations=100, temp=1, cool=lambda t: t):
+def nature(graph, width=500, length=500, iterations=100, temp=1, cool=lambda t: np.exp(-t)):
     """
     Graph drawing by forced-directed placement.
     temp is the maximum displacement of a given vertex on an iteration which
     is annealed over time with the cooling function
     """
-    C = 10000000000  # constant used for tuning the spring constant
+    C = 10  # constant used for tuning the spring constant
     area = width * length
     k = C * np.sqrt(area/len(graph.V))
 
     # attractive force
     def fa(d): return (d*d) / k
+    # def fa(d): return k*np.log(d)
 
     # repulsive force
-    def fr(d): return -(k*k) / d
+    # def fr(d): return (k*k) / d
+    def fr(d): return k / (d*d)
 
     for i in range(iterations):
         # calculate repulsive forces
@@ -32,6 +34,7 @@ def nature(graph, width=500, length=500, iterations=100, temp=1, cool=lambda t: 
                     norm = np.linalg.norm(d)
                     v1.disp = v1.disp + (d / norm) * fr(norm)
                     # print("d = {}, norm = {},\nv1 {!s}\nv2 {!s}".format(d, norm, v1, v2))
+
         # print("Calculature attractive forces:\n")
         # calculate attractive forces
         for e in graph.E:
