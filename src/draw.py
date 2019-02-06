@@ -55,6 +55,6 @@ if __name__ == '__main__':
     G = graph.generate6()
     print(G)
     # draw_graph(G)
-    G = nature.nature(G, iterations=1000)
+    G = nature.nature(G, iterations=250)
     print(G)
     draw_graph(G)

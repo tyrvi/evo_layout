@@ -30,15 +30,16 @@ class Vertex:
     def __init__(self, idx, pos=[0, 0], disp=[0, 0], radius=10, random=False, width=200, height=200):
         # TODO: allow for random instantiation of position
         if random is True:
-            x = np.random.randint(0, width)
-            y = np.random.randint(0, height)
+            self.radius = np.random.randint(4, 25)
+            x = np.random.randint(self.radius, width-self.radius)
+            y = np.random.randint(self.radius, height-self.radius)
             self.pos = np.array([x, y])
-            self.disp = np.array(disp)
         else:
+            self.radius = radius
             self.pos = np.array(pos)
-            self.disp = np.array(disp)
 
-        self.radius = radius
+        # self.radius = radius
+        self.disp = np.array(disp)
         self.idx = idx
 
     def __str__(self):
@@ -47,7 +48,12 @@ class Vertex:
 
 class Edge:
     """An Edge consists of two instances of Vertex, `v1` and `v2`."""
-    def __init__(self, v1=None, v2=None):
+    def __init__(self, v1=None, v2=None, k=1, random=False):
+        # The 'spring' constant for the edge.
+        if random is True:
+            k = k*np.random.random()
+
+        self.k = k
         self.v1 = v1
         self.v2 = v2
 
@@ -76,11 +82,12 @@ def generate6():
         v = Vertex(i, random=True)
         V.append(v)
 
-    E.append(Edge(V[0], V[1]))
-    E.append(Edge(V[0], V[3]))
-    E.append(Edge(V[0], V[4]))
-    E.append(Edge(V[1], V[2]))
-    E.append(Edge(V[2], V[5]))
+    E.append(Edge(V[0], V[1], k=1/2, random=True))
+    E.append(Edge(V[0], V[3], k=1/2, random=True))
+    E.append(Edge(V[0], V[4], k=1/2, random=True))
+    E.append(Edge(V[1], V[2], k=1/2, random=True))
+    E.append(Edge(V[2], V[5], k=1/2, random=True))
+    E.append(Edge(V[4], V[5], k=1/2, random=True))
 
     return Graph(V, E)
 

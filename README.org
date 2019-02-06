@@ -40,25 +40,29 @@ Project to replicate the results of Joel Simon on [[http://www.joelsimon.net/evo
 * Todo List
 ** DONE Fix bug placing vertices on top of each other
    CLOSED: [2019-01-26 Sat 17:48]
-** TODO Graph algorithm [0/4]
-   1. [ ] Allow for passing in different room size constants to repulsive forces (these
+** Graph algorithm [2/3]
+   1. [X] Allow for passing in different room size constants to repulsive forces (these
       are the radii for the various room sizes).
-   2. [ ] Allow different forces to be passed into nature.
-   3. [ ] Allow for different edge strengths in attractive forces.
+   2. [X] Allow for different edge strengths in attractive forces.
+   3. [ ] Allow different forces to be passed into nature.
+** TODO Voronoi tessellation
 ** TODO NEAT [0/3]
-   1. [ ] Node representation. [0/2]
-      1. [ ] Size.
-         - The radius of the node to be used in the graph drawing
-           algorithm.
-      2. [ ] Room type.
-         - This will encode the density a given room can expect. For
-           example, a room with lots of tables and high usage needs
-           more space than a room with high usage where people are
-           just standing.
+   1. [ ] Node representation. [0/3]
+      - [ ] Size.
+        - The radius of the node to be used in the graph drawing
+          algorithm.
+      - [ ] Room type.
+        - This will encode the density a given room can expect. For
+          example, a room with lots of tables and high usage needs
+          more space than a room with high usage where people are
+          just standing.
+      - [ ] Allow nodes to have an initial placement in before running
+        the graph algorithm. That way an optimal placement of the
+        vertices for the graph simulation can be evolved.
    2. [ ] Edge representation. [0/1]
-      1. [ ] Connection weight (spring constant in attractive forces).
+      - [ ] Connection weight (spring constant in attractive forces).
    3. [ ] Objective functions. [0/2]
-      1. [ ] Rooms with high levels of usage should be placed near
-         other rooms with high levels of usage.
-      2. [ ] Room size should be optimal to the amount of usage that
-         room type sees.
+      - [ ] Rooms with high levels of usage should be placed near
+        other rooms with high levels of usage.
+      - [ ] Room size should be optimal to the amount of usage that
+        room type sees.
