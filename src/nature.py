@@ -65,12 +65,20 @@ def nature(graph, width=500, height=500, iterations=100, temp=1, cool=lambda t: 
             # has positive coordinates
             v.pos[0] = min(width-v.radius, max(v.radius, v.pos[0]))
             v.pos[1] = min(height-v.radius, max(v.radius, v.pos[1]))
-            # v.pos[0] = min(width, max(0, v.pos[0]))
-            # v.pos[1] = min(height, max(0, v.pos[1]))
+            # v = bound(v)
 
         temp = cool(temp)
 
     return graph
+
+
+def bound(v, polygon):
+    """
+    Forces a vertex to stay within the bounds of the polygon.
+    Returns the bounded (x, y) coordinates of the vertex.
+    """
+    raise NotImplementedError("Bound has not been implemented yet.")
+    return (0, 0)
 
 
 if __name__ == '__main__':

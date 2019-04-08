@@ -6,9 +6,13 @@ class Graph:
     def __init__(self, V=[], E=[]):
         self.V = V
         self.E = E
+        self.points = []
+        for v in V:
+            self.points.append([v.pos[0], v.pos[1]])
 
     def add_vertex(self, v):
         self.V.append(v)
+        self.points.append([v.pos[0], v.pos[1]])
 
     def add_edge(self, e):
         self.E.append(e)
@@ -27,7 +31,8 @@ class Graph:
 class Vertex:
     """A Vertex consists of a 2-tuple for position, `pos`, and a 2-tuple for
     displacement, `disp`."""
-    def __init__(self, idx, pos=[0, 0], disp=[0, 0], radius=10, random=False, width=200, height=200):
+    def __init__(self, idx, pos=[0, 0], disp=[0, 0], radius=10, random=False,
+                 width=200, height=200, rtype=None):
         # TODO: allow for random instantiation of position
         if random is True:
             self.radius = np.random.randint(4, 25)
@@ -41,9 +46,10 @@ class Vertex:
         # self.radius = radius
         self.disp = np.array(disp)
         self.idx = idx
+        self.rtype = rtype
 
     def __str__(self):
-        return "idx = {!s}, pos = {!s}, radius = {!s}, disp = {!s}".format(self.idx, self.pos, self.radius, self.disp)
+        return "idx = {!s}, pos = ({:.2f}, {:.2f}), radius = {!s}, disp = {!s}".format(self.idx, self.pos[0], self.pos[1], self.radius, self.disp)
 
 
 class Edge:
@@ -58,7 +64,7 @@ class Edge:
         self.v2 = v2
 
     def __str__(self):
-        return "{!s} <--> {!s}".format(self.v1.idx, self.v2.idx)
+        return "{!s} <--> {!s}: ({:.2f}, {:.2f}) <--> ({:.2f}, {:.2f})".format(self.v1.idx, self.v2.idx, self.v1.pos[0], self.v1.pos[1], self.v2.pos[0], self.v2.pos[1])
 
 
 def generate3():
